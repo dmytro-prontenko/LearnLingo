@@ -8,6 +8,10 @@ const modalRootElement = document.querySelector("#modal");
 export const containerVariants = {
   hidden: {
     opacity: 0,
+    transition: {
+      delay: 0,
+      duration: 0.5,
+    },
   },
   visible: {
     opacity: 1,

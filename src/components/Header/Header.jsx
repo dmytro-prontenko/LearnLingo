@@ -10,8 +10,18 @@ import {
 } from "./Header.styled";
 
 import sprite from "../../images/sprite.svg";
+import { ModalContext } from "../../context/ModalContext";
+import { useContext } from "react";
 
 const Header = () => {
+  const { modalStatus, setModalStatus, modalContent, setModalContent } =
+  useContext(ModalContext);
+
+  const handleModal = (e) =>{
+    setModalStatus(!modalStatus)
+    setModalContent(e.currentTarget.name)
+  }
+
   return (
     <motion.div
       initial={{ y: -150 }}
@@ -26,13 +36,13 @@ const Header = () => {
           <StyledLink to="/teachers">Teachers</StyledLink>
         </StyledLinks>
         <StyledButtons>
-          <StyledLogInBtn>
+          <StyledLogInBtn onClick={handleModal} name="login">
             <svg width={"20px"} height={"20px"}>
               <use href={sprite + "#icon-log-in"}></use>
             </svg>
             <span>Login</span>
           </StyledLogInBtn>
-          <StyledRegistrationBtn>Registration</StyledRegistrationBtn>
+          <StyledRegistrationBtn onClick={handleModal} name="register">Registration</StyledRegistrationBtn>
         </StyledButtons>
       </StyledNav>
     </motion.div>
