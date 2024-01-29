@@ -1,18 +1,19 @@
 import { useContext } from "react";
 import { ModalContext } from "../../context/ModalContext";
+import Login from "../Forms/Login/Login";
+import Registration from "../Forms/Registration/Registration";
 
 const ModalContent = () => {
-  const {modalContent} = useContext(ModalContext)
+  const { modalContent } = useContext(ModalContext);
 
   switch (modalContent) {
     case "login":
-      return <div>Log In</div>;
+      return <Login />;
     case "register":
-      return <div>Register</div>;
+      return <Registration />;
     default:
       return null;
   }
 };
 
-
-export default ModalContent
+export default ModalContent;

@@ -15,8 +15,12 @@ export const StyledBackdrop = styled.div`
 
 export const StyledModalContent = styled.div`
   background: white;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   overflow-y: auto;
+  padding: 64px;
+  width: 566px;
+  box-sizing:border-box;
+
 
   &::-webkit-scrollbar {
     width: 3px;

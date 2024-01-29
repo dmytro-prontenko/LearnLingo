@@ -14,7 +14,7 @@ import { ModalContext } from "../../context/ModalContext";
 import { useContext } from "react";
 
 const Header = () => {
-  const { modalStatus, setModalStatus, modalContent, setModalContent } =
+  const { modalStatus, setModalStatus, setModalContent } =
   useContext(ModalContext);
 
   const handleModal = (e) =>{
