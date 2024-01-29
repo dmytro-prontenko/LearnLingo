@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useCallback } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { StyledBackdrop, StyledModalContent } from "./Modal.styled";
-import { motion, AnimatePresence } from "framer-motion";
 
 const modalRootElement = document.querySelector("#modal");
 
@@ -22,7 +22,7 @@ export const containerVariants = {
   },
   exit: {
     opacity: 0,
-    transition: { delay: 0, duration: 0.5 },
+    transition: { delay: 0, duration: 0.3 },
   },
 };
 

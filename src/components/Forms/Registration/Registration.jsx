@@ -1,7 +1,24 @@
 import { useForm } from "react-hook-form";
-import { StyledForm } from "./Registration.styled";
+import {
+  StyledCloseBtn,
+  StyledForm,
+  StyledFormButton,
+  StyledFormText,
+  StyledFormTitle,
+  StyledInput,
+} from "./Registration.styled";
+import { useContext } from "react";
+import { ModalContext } from "../../../context/ModalContext";
+import sprite from "../../../images/sprite.svg";
+
 
 const Registration = () => {
+  const { setModalStatus } = useContext(ModalContext);
+
+  const closeModal = () => {
+    setModalStatus(false);
+  };
+
   const {
     register,
     handleSubmit,
@@ -13,28 +30,33 @@ const Registration = () => {
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <h3>Registration</h3>
-      <div>
+      <StyledCloseBtn onClick={closeModal}>
+        <svg width={"32px"} height={"32px"}>
+          <use href={sprite + "#icon-close"}></use>
+        </svg>
+      </StyledCloseBtn>
+      <StyledFormTitle>Registration</StyledFormTitle>
+      <StyledFormText>
         Thank you for your interest in our platform! In order to register, we
         need some information. Please provide us with the following information
-      </div>
-      <input
+      </StyledFormText>
+      <StyledInput
         type="text"
         placeholder="Name"
         {...register("Name", { required: true })}
       />
-      <input
+      <StyledInput
         type="text"
         placeholder="Email"
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
       />
-      <input
+      <StyledInput
         type="password"
         placeholder="Password"
         {...register("Password", { required: true })}
       />
 
-      <input type="submit" />
+      <StyledFormButton type="submit">Sign Up</StyledFormButton>
     </StyledForm>
   );
 };

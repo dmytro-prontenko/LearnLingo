@@ -1,7 +1,24 @@
 import { useForm } from "react-hook-form";
-import { StyledForm } from "./Login.styled";
+import {
+  StyledCloseBtn,
+  StyledForm,
+  StyledFormButton,
+  StyledFormText,
+  StyledFormTitle,
+  StyledInput,
+} from "./Login.styled";
+import sprite from "../../../images/sprite.svg";
+import { useContext } from "react";
+import { ModalContext } from "../../../context/ModalContext";
 
 const Login = () => {
+  const {setModalStatus} =
+  useContext(ModalContext);
+
+  const closeModal = () => {
+    setModalStatus(false)
+  }
+
   const {
     register,
     handleSubmit,
@@ -13,20 +30,28 @@ const Login = () => {
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <h3>Login</h3>
-      <div>Welcome back! Please enter your credentials to access your account and continue your search for an teacher.</div>
-      <input
+      <StyledCloseBtn onClick={closeModal}>
+        <svg width={"32px"} height={"32px"}>
+          <use href={sprite + "#icon-close"}></use>
+        </svg>
+      </StyledCloseBtn>
+      <StyledFormTitle>Login</StyledFormTitle>
+      <StyledFormText>
+        Welcome back! Please enter your credentials to access your account and
+        continue your search for an teacher.
+      </StyledFormText>
+      <StyledInput
         type="text"
         placeholder="Email"
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
       />
-      <input
+      <StyledInput
         type="password"
         placeholder="Password"
         {...register("Password", { required: true })}
       />
 
-      <input type="submit" />
+      <StyledFormButton type="submit">Log in</StyledFormButton>
     </StyledForm>
   );
 };
