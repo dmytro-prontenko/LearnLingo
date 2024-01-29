@@ -9,6 +9,7 @@ import {
   StyledHeroInfo,
   StyledHeroText,
   StyledHeroWrapper,
+  StyledSpan,
   StyledText,
   StyledTitle,
 } from "./Homepage.styled";
@@ -27,7 +28,7 @@ const HomePage = () => {
           <StyledHeroInfo>
             <StyledHeroText>
               <StyledTitle>
-                Unlock your potential with the best <span>language</span> tutors
+                Unlock your potential with the best <StyledSpan>language</StyledSpan> tutors
               </StyledTitle>
               <StyledText>
                 Embark on an Exciting Language Journey with Expert Language
