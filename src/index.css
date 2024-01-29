@@ -6,6 +6,8 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: cover, auto;
   width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 h1,
@@ -30,7 +32,9 @@ p {
 
 .container {
   width: 1440px;
-  padding: 12px 128px;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

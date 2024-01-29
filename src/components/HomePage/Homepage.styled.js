@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeroWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: auto-fit;
-  gap: 20px;
-  grid-template-areas:
-    "title img"
-    "footer footer";
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 720px 568px;
+    gap: 20px;
+    grid-template-areas:
+      "title img"
+      "footer footer";
+  }
 `;
 
 export const StyledHeroInfo = styled.div`
@@ -54,9 +58,7 @@ export const StyledText = styled.p`
 
 export const StyledHeroImg = styled(motion.img)`
   grid-area: img;
-  /* width: 100%; */
   height: 530px;
-  /* object-fit: cover; */
 `;
 export const StyledHeroFooter = styled(motion.div)`
   grid-area: footer;
@@ -67,6 +69,7 @@ export const StyledHeroFooter = styled(motion.div)`
   border: 1.5px solid #f4c550;
 
   padding: 40px 122px;
+  margin-bottom: 20px;
 `;
 
 export const StyledHeroText = styled.div`
@@ -75,13 +78,16 @@ export const StyledHeroText = styled.div`
   gap: 32px;
 `;
 
-export const StyledHeroBtn = styled.button`
-  width: 272px;
+export const StyledHeroBtn = styled(NavLink)`
+  display: inline-block;
+  width: 267px;
   padding: 16px 88px;
   border: none;
   border-radius: 12px;
   background: #f4c550;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 
   color: #121417;
   font-size: 18px;

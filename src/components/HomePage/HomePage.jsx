@@ -36,7 +36,7 @@ const HomePage = () => {
                 connecting with highly qualified and experienced tutors.
               </StyledText>
             </StyledHeroText>
-            <StyledHeroBtn>Get started</StyledHeroBtn>
+            <StyledHeroBtn to="/teachers">Get started</StyledHeroBtn>
           </StyledHeroInfo>
         </motion.div>
 
