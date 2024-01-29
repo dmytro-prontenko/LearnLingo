@@ -6,7 +6,7 @@ export const StyledNav = styled.nav`
   /* gap: clamp(100px, 33%, 500px); */
   padding: 30px 128px;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 `;
 
 export const StyledLogo = styled(NavLink)`
@@ -52,6 +52,7 @@ export const StyledLogInBtn = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 125% */
+  cursor: pointer;
 `;
 
 export const StyledRegistrationBtn = styled.button`
@@ -70,4 +71,6 @@ export const StyledRegistrationBtn = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 125% */
+
+  cursor: pointer;
 `;
