@@ -13,8 +13,11 @@ const Registration = () => {
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-            <h3>Registration</h3>
-      <div>Welcome back! Please enter your credentials to access your account and continue your search for an teacher.</div>
+      <h3>Registration</h3>
+      <div>
+        Thank you for your interest in our platform! In order to register, we
+        need some information. Please provide us with the following information
+      </div>
       <input
         type="text"
         placeholder="Name"
