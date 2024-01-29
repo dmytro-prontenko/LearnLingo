@@ -31,8 +31,8 @@ const Login = () => {
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <StyledCloseBtn onClick={closeModal}>
-        <svg width={"32px"} height={"32px"}>
-          <use href={sprite + "#icon-close"}></use>
+        <svg width={"32px"} height={"32px"} fill="black">
+          <use href={sprite + "#icon-heart"}></use>
         </svg>
       </StyledCloseBtn>
       <StyledFormTitle>Login</StyledFormTitle>

@@ -37,7 +37,7 @@ const Header = () => {
         </StyledLinks>
         <StyledButtons>
           <StyledLogInBtn onClick={handleModal} name="login">
-            <svg width={"20px"} height={"20px"}>
+            <svg width={"20px"} height={"20px"} >
               <use href={sprite + "#icon-log-in"}></use>
             </svg>
             <span>Login</span>
