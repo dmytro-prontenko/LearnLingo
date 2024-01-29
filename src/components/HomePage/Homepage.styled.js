@@ -12,12 +12,14 @@ export const StyledHeroWrapper = styled.div`
 `;
 
 export const StyledHeroInfo = styled.div`
-  outline: 1px solid tomato;
   grid-area: title;
   display: flex;
   flex-direction: column;
   gap: 64px;
   padding: 98px 64px;
+
+  border-radius: 30px;
+  background: #f8f8f8;
 `;
 
 export const StyledTitle = styled.h2`
@@ -28,15 +30,16 @@ export const StyledText = styled.p`
   max-width: 441px;
 `;
 
-export const StyledHeroImg = styled.div`
-  outline: 1px solid tomato;
+export const StyledHeroImg = styled(motion.img)`
   grid-area: img;
 `;
 export const StyledHeroFooter = styled(motion.div)`
-  outline: 1px solid tomato;
   grid-area: footer;
   display: flex;
   justify-content: space-around;
+
+  border-radius: 30px;
+  border: 1.5px solid #f4c550;
 `;
 
 export const StyledHeroText = styled.div`

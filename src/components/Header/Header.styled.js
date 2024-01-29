@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const StyledNav = styled.nav`
   display: flex;
   padding: 12px 128px;
-  background-color:teal;
+  /* background-color:teal; */
 `;
 
 export const StyledLogo = styled(NavLink)`

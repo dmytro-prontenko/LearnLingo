@@ -13,6 +13,8 @@ import {
   StyledTitle,
 } from "./Homepage.styled";
 
+import heroImage from "../../images/hero.png"
+
 const HomePage = () => {
   return (
     <>
@@ -36,35 +38,37 @@ const HomePage = () => {
             <StyledHeroBtn>Get started</StyledHeroBtn>
           </StyledHeroInfo>
         </motion.div>
-        <motion.div
+
+        <StyledHeroImg
           initial={{ x: 1500 }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-        >
-          <StyledHeroImg>IMG</StyledHeroImg>
-        </motion.div>
+          src={heroImage}
+          alt="hero_image"
+        />
+
         <StyledHeroFooter
           initial={{ y: 1500 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-            <StyledFooterItem>
-              <StyledFooterItemDigit>32,000 +</StyledFooterItemDigit>
-              <StyledFooterItemText>Experienced tutors</StyledFooterItemText>
-            </StyledFooterItem>
-            <StyledFooterItem>
-              <StyledFooterItemDigit>300,000 +</StyledFooterItemDigit>
-              <StyledFooterItemText>5-star tutor reviews</StyledFooterItemText>
-            </StyledFooterItem>
-            <StyledFooterItem>
-              <StyledFooterItemDigit>120 +</StyledFooterItemDigit>
-              <StyledFooterItemText>Subjects taught</StyledFooterItemText>
-            </StyledFooterItem>
-            <StyledFooterItem>
-              <StyledFooterItemDigit>200 +</StyledFooterItemDigit>
-              <StyledFooterItemText>Tutor nationalities</StyledFooterItemText>
-            </StyledFooterItem>
-          </StyledHeroFooter>
+          <StyledFooterItem>
+            <StyledFooterItemDigit>32,000 +</StyledFooterItemDigit>
+            <StyledFooterItemText>Experienced tutors</StyledFooterItemText>
+          </StyledFooterItem>
+          <StyledFooterItem>
+            <StyledFooterItemDigit>300,000 +</StyledFooterItemDigit>
+            <StyledFooterItemText>5-star tutor reviews</StyledFooterItemText>
+          </StyledFooterItem>
+          <StyledFooterItem>
+            <StyledFooterItemDigit>120 +</StyledFooterItemDigit>
+            <StyledFooterItemText>Subjects taught</StyledFooterItemText>
+          </StyledFooterItem>
+          <StyledFooterItem>
+            <StyledFooterItemDigit>200 +</StyledFooterItemDigit>
+            <StyledFooterItemText>Tutor nationalities</StyledFooterItemText>
+          </StyledFooterItem>
+        </StyledHeroFooter>
         {/* </StyledHeroFooter> */}
       </StyledHeroWrapper>
     </>
