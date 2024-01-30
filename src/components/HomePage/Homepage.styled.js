@@ -6,9 +6,32 @@ export const StyledHeroWrapper = styled.div`
   display: grid;
   justify-content: center;
 
+  margin: 0 auto;
+  /* width: 90%; */
+  grid-template-columns: 320px;
+  grid-template-rows: auto;
+  row-gap:20px;
+  justify-items: center;
+  grid-template-areas:
+    "title"
+    "img"
+    "footer";
+
   @media screen and (min-width: 768px) {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 30px;
+    grid-template-areas:
+      "title title"
+      "img img"
+      "footer footer";
+
+      justify-items: center;
+  }
+  @media screen and (min-width: 1440px) {
     grid-template-columns: 720px 568px;
-    gap: 20px;
+    /* gap: 20px 20px; */
     grid-template-areas:
       "title img"
       "footer footer";
@@ -19,11 +42,18 @@ export const StyledHeroInfo = styled.div`
   grid-area: title;
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  padding: 98px 64px;
-
   border-radius: 30px;
   background: #f8f8f8;
+  gap:40px;
+  padding: 49px 32px;
+
+  @media screen and (min-width:1440px){
+
+    gap: 64px;
+    padding: 98px 64px;
+  }
+
+  
 `;
 
 export const StyledTitle = styled.h2`
@@ -58,18 +88,33 @@ export const StyledText = styled.p`
 
 export const StyledHeroImg = styled(motion.img)`
   grid-area: img;
-  height: 530px;
+  height: 230px;
+
+  @media screen and (min-width: 768px) {
+    height: 530px;
+    width: 530px;
+  }
 `;
 export const StyledHeroFooter = styled(motion.div)`
   grid-area: footer;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
 
   border-radius: 30px;
   border: 1.5px solid #f4c550;
 
   padding: 40px 122px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
 `;
 
 export const StyledHeroText = styled.div`
@@ -79,8 +124,10 @@ export const StyledHeroText = styled.div`
 `;
 
 export const StyledHeroBtn = styled(NavLink)`
-  display: inline-block;
-  width: 267px;
+  display: flex;
+  justify-content:center;
+  flex-wrap: nowrap;
+  width: 19%;
   padding: 16px 88px;
   border: none;
   border-radius: 12px;
@@ -94,10 +141,18 @@ export const StyledHeroBtn = styled(NavLink)`
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 155.556% */
+
+  @media screen and (min-width:320px) {
+    align-self:center;
+  }
+  @media screen and (min-width:1440px) {
+    align-self:start;
+  }
 `;
 
 export const StyledFooterItem = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
 `;
