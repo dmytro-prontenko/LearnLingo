@@ -32,7 +32,7 @@ const Registration = () => {
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <StyledCloseBtn onClick={closeModal}>
         <svg width={"32px"} height={"32px"}>
-          <use xlinkHref={sprite + "#icon-close"}></use>
+          <use xlinkHref={sprite + "#close"}></use>
         </svg>
       </StyledCloseBtn>
       <StyledFormTitle>Registration</StyledFormTitle>
