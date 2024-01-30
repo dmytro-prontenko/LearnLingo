@@ -9,7 +9,7 @@ import {
 } from "./Registration.styled";
 import { useContext } from "react";
 import { ModalContext } from "../../../context/ModalContext";
-import sprite from "../../../../public/sprite.svg";
+import sprite from "../../../assets/sprite.svg";
 
 
 const Registration = () => {

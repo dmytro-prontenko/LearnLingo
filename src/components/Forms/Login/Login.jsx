@@ -7,7 +7,7 @@ import {
   StyledFormTitle,
   StyledInput,
 } from "./Login.styled";
-import sprite from "../../../../public/sprite.svg";
+import sprite from "../../../assets/sprite.svg"
 import { useContext } from "react";
 import { ModalContext } from "../../../context/ModalContext";
 

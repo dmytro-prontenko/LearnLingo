@@ -9,7 +9,7 @@ import {
   StyledRegistrationBtn,
 } from "./Header.styled";
 
-import sprite from "../../../public/sprite.svg";
+import sprite from "../../assets/sprite.svg";
 import { ModalContext } from "../../context/ModalContext";
 import { useContext } from "react";
 
