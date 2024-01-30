@@ -15,7 +15,8 @@ import sprite from "../../../assets/sprite.svg";
 const Registration = () => {
   const { setModalStatus } = useContext(ModalContext);
 
-  const closeModal = () => {
+  const closeModal = (e) => {
+    e.preventDefault();
     setModalStatus(false);
   };
 

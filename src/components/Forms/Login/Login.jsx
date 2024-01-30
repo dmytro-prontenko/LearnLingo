@@ -15,7 +15,8 @@ const Login = () => {
   const {setModalStatus} =
   useContext(ModalContext);
 
-  const closeModal = () => {
+  const closeModal = (e) => {
+    e.preventDefault();
     setModalStatus(false)
   }
 
