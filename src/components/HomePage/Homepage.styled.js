@@ -10,7 +10,7 @@ export const StyledHeroWrapper = styled.div`
   /* width: 90%; */
   grid-template-columns: 320px;
   grid-template-rows: auto;
-  row-gap:20px;
+  row-gap: 20px;
   justify-items: center;
   grid-template-areas:
     "title"
@@ -27,11 +27,10 @@ export const StyledHeroWrapper = styled.div`
       "img img"
       "footer footer";
 
-      justify-items: center;
+    justify-items: center;
   }
   @media screen and (min-width: 1440px) {
     grid-template-columns: 720px 568px;
-    /* gap: 20px 20px; */
     grid-template-areas:
       "title img"
       "footer footer";
@@ -44,16 +43,13 @@ export const StyledHeroInfo = styled.div`
   flex-direction: column;
   border-radius: 30px;
   background: #f8f8f8;
-  gap:40px;
+  gap: 40px;
   padding: 49px 32px;
 
-  @media screen and (min-width:1440px){
-
+  @media screen and (min-width: 1440px) {
     gap: 64px;
-    padding: 98px 64px;
+    padding: 84px 64px;
   }
-
-  
 `;
 
 export const StyledTitle = styled.h2`
@@ -61,7 +57,7 @@ export const StyledTitle = styled.h2`
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
-  line-height: 56px; /* 116.667% */
+  line-height: 56px;
   letter-spacing: -0.96px;
   max-width: 548px;
 `;
@@ -125,7 +121,7 @@ export const StyledHeroText = styled.div`
 
 export const StyledHeroBtn = styled(NavLink)`
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: nowrap;
   width: 19%;
   padding: 16px 88px;
@@ -142,11 +138,11 @@ export const StyledHeroBtn = styled(NavLink)`
   font-weight: 700;
   line-height: 28px; /* 155.556% */
 
-  @media screen and (min-width:320px) {
-    align-self:center;
+  @media screen and (min-width: 320px) {
+    align-self: center;
   }
-  @media screen and (min-width:1440px) {
-    align-self:start;
+  @media screen and (min-width: 1440px) {
+    align-self: start;
   }
 `;
 

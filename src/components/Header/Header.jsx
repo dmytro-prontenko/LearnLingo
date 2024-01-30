@@ -27,7 +27,7 @@ const Header = () => {
       initial={{ y: -150 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
-      className="container"
+      // className="container"
     >
       <StyledNav>
         <StyledLogo to="/">LearnLingo</StyledLogo>

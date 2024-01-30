@@ -3,10 +3,20 @@ import styled from "styled-components";
 
 export const StyledNav = styled.nav`
   display: flex;
-  /* gap: clamp(100px, 33%, 500px); */
-  padding: 30px 128px;
+  padding: 30px 20px;
+  max-width: 320px;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 30px 84px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 30px 128px;
+  }
 `;
 
 export const StyledLogo = styled(NavLink)`
@@ -17,13 +27,11 @@ export const StyledLogo = styled(NavLink)`
   line-height: 24px; /* 120% */
   letter-spacing: -0.4px;
   text-decoration: none;
-  margin-right: clamp(100px, 390px, 500px);
 `;
 
 export const StyledLinks = styled.div`
   display: flex;
   gap: 28px;
-  margin-right: clamp(100px, 268px, 500px);
 `;
 
 export const StyledLink = styled(NavLink)`
