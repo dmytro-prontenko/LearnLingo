@@ -15,12 +15,12 @@ import { useContext } from "react";
 
 const Header = () => {
   const { modalStatus, setModalStatus, setModalContent } =
-  useContext(ModalContext);
+    useContext(ModalContext);
 
-  const handleModal = (e) =>{
-    setModalStatus(!modalStatus)
-    setModalContent(e.currentTarget.name)
-  }
+  const handleModal = (e) => {
+    setModalStatus(!modalStatus);
+    setModalContent(e.currentTarget.name);
+  };
 
   return (
     <motion.div
@@ -37,12 +37,14 @@ const Header = () => {
         </StyledLinks>
         <StyledButtons>
           <StyledLogInBtn onClick={handleModal} name="login">
-            <svg width={"20px"} height={"20px"} >
+            <svg width={"20px"} height={"20px"}>
               <use xlinkHref={sprite + "#icon-log-in"}></use>
             </svg>
             <span>Login</span>
           </StyledLogInBtn>
-          <StyledRegistrationBtn onClick={handleModal} name="register">Registration</StyledRegistrationBtn>
+          <StyledRegistrationBtn onClick={handleModal} name="register">
+            Registration
+          </StyledRegistrationBtn>
         </StyledButtons>
       </StyledNav>
     </motion.div>
